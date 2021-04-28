@@ -16,7 +16,7 @@ namespace StockManagement
 
         }
 
-        public string notSoldItems()
+        public string itemsNotSold()
         {
 
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
