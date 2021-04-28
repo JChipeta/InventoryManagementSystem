@@ -72,7 +72,6 @@ namespace StockManagement
 
 
            
-                //Insert record here.
 
                 //Display success message.
                 string message = "Item Added Successfully.";
@@ -80,7 +79,14 @@ namespace StockManagement
                 script += message;
                 script += "')};";
                 ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
-            
+
+            //empty text after message
+                itemnametb.Text = "";
+                descriptiontb.Text = "";
+                pricetb.Text = "";
+                categorytb.Text = "";
+                quantitytb.Text = "";
+;
 
         }
 
@@ -104,6 +110,13 @@ namespace StockManagement
             script += message;
             script += "')};";
             ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            //empty text field after message
+            membernametb.Text = "";
+            addresstb.Text = "";
+            contactnumbertb.Text = "";
+            emailtb.Text = "";
+            membertypetb.Text = "";
 
 
 
@@ -168,7 +181,7 @@ namespace StockManagement
             script += message;
             script += "')};";
             ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
-
+            quantitytb0.Text = "";
 
 
         }
