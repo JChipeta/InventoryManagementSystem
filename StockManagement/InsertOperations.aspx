@@ -1,60 +1,102 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertOperations.aspx.cs" Inherits="StockManagement.InsertOperations" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
- 
-    <br />
-    <br />
-    Item Name&nbsp;&nbsp; <asp:TextBox ID="itemnametb"  runat="server" CssClass="glyphicon-envelope"></asp:TextBox>
-    <br />
-<br />
+    <h1  class="page-header">Add Item</h1>
+
+ <table style="width:500px;" class="table" >
+
+    
+        <td>
+
+     
+    Item Name <asp:TextBox ID="itemnametb"  runat="server" CssClass="glyphicon-envelope"></asp:TextBox>
+
+            </td>
+        
+     
+         <td>
 Description <asp:TextBox ID="descriptiontb" runat="server"></asp:TextBox>
-    <br />
-<br />
-Price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="pricetb" runat="server"></asp:TextBox>
-    <br />
-<br />
-Category&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="categorytb" runat="server"></asp:TextBox>
-    <br />
-<br />
-    <asp:Label ID="id" runat="server" Text="Quantity"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+             </td>
+       
+
+     
+ <td>
+Price <asp:TextBox ID="pricetb" runat="server"></asp:TextBox>
+
+</td>
+
+     <td>
+
+Category <asp:TextBox ID="categorytb" runat="server"></asp:TextBox>
+     </td>
+     <td>
+   Quantity
+        
+
     <asp:TextBox ID="quantitytb" runat="server"></asp:TextBox>
-    <br />
-    <br />
-    <br />
+ </td>
+
+
+     <td>
+         <br />
 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add Item" Width="83px" />
-    <br />
-    <br />
-    <asp:Label ID="Label3" runat="server" Text="Member Name"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:TextBox ID="membernametb" runat="server"></asp:TextBox>
-<br />
-<asp:Label ID="Label4" runat="server" Text="Address"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:TextBox ID="addresstb" runat="server"></asp:TextBox>
-<br />
-<asp:Label ID="Label5" runat="server" Text="Contact Number"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:TextBox ID="contactnumbertb" runat="server"></asp:TextBox>
-<br />
-<asp:Label ID="Label6" runat="server" Text="Email"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<asp:TextBox ID="emailtb" runat="server"></asp:TextBox>
-<br />
-<asp:Label ID="Label7" runat="server" Text="Member Type"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+     </table>
+
+    <h1  class="page-header">Add Member</h1>
+     <table style="width:500px;" class="table" >
+
+         <td>
+
+             
+   Member Name <asp:TextBox ID="membernametb" runat="server"></asp:TextBox>
+
+             </td>
+         <td>
+Address <asp:TextBox ID="addresstb" runat="server"></asp:TextBox>
+             </td>
+
+         <td>
+Contact Number <asp:TextBox ID="contactnumbertb" runat="server"></asp:TextBox>
+             </td>
+
+<td>
+Email <asp:TextBox ID="emailtb" runat="server"></asp:TextBox>
+    </td>
+
+<td>
+Member Type
+
 <asp:TextBox ID="membertypetb" runat="server"></asp:TextBox>
-<br />
-<br />
+
+    </td>
+
+         <td>
+             <br />
+
 <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Add Member" />
+             </td>
 
-     &nbsp;&nbsp;
+         </table>
+    <h1  class="page-header">Add Stock</h1>
 
-     <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="ItemName" DataValueField="ItemCode">
+    <table style="width:500px;" class="table" >
+
+        <td>
+    
+<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="ItemName" DataValueField="ItemCode">
 </asp:DropDownList>
-&nbsp;&nbsp;
-<asp:Label ID="Label2" runat="server" Text="Quantity"></asp:Label>
-&nbsp;
+            </td>
+
+        <td>
+Quantity
+
 <asp:TextBox ID="quantitytb0" runat="server"></asp:TextBox>
+            </td>
+
+        <td>
 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
 <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Add Stock" />
+            </td>
+        </table>
 </asp:Content>
