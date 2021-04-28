@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace StockManagement
 {
-    public partial class PurchaseDetail : System.Web.UI.Page
+    public partial class InvoiceRecord : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

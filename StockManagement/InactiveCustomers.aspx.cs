@@ -16,7 +16,7 @@ namespace StockManagement
 
         }
 
-        public string inactiveMembers() 
+        public string inactiveCustomers() 
         {
 
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;

@@ -10,7 +10,7 @@
 
 namespace StockManagement
 {
-    public partial class RemoveStock
+    public partial class DeleteItems
     {
     }
 }

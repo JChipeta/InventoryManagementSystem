@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace StockManagement
 {
-    public partial class RemoveStock : System.Web.UI.Page
+    public partial class DeleteItems : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

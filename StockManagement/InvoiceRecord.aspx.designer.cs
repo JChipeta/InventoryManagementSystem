@@ -11,7 +11,7 @@ namespace StockManagement
 {
 
 
-    public partial class PurchaseDetail
+    public partial class InvoiceRecord
     {
 
         /// <summary>

@@ -11,7 +11,7 @@ namespace StockManagement
 {
 
 
-    public partial class AddItem
+    public partial class InsertOperations
     {
 
         /// <summary>
