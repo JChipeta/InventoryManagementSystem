@@ -52,12 +52,7 @@ namespace StockManagement
 
                 }
 
-                /*         cmd.Parameters.AddWithValue("@ItemCode", $"{itemname}");
-                         cmd.Parameters.AddWithValue("@MemberNumber", $"{member}");
-                         cmd.Parameters.AddWithValue("@BillingDate", "2021-05-04");
-                         cmd.Parameters.AddWithValue("@Quantity", $"{quantity}");*/
-
-
+              
             }
          
 
@@ -160,10 +155,7 @@ namespace StockManagement
 
                 }
 
-                /*         cmd.Parameters.AddWithValue("@ItemCode", $"{itemname}");
-                         cmd.Parameters.AddWithValue("@MemberNumber", $"{member}");
-                         cmd.Parameters.AddWithValue("@BillingDate", "2021-05-04");
-                         cmd.Parameters.AddWithValue("@Quantity", $"{quantity}");*/
+             
 
 
             }
