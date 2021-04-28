@@ -71,6 +71,17 @@ namespace StockManagement
 
 
 
+           
+                //Insert record here.
+
+                //Display success message.
+                string message = "Item Added Successfully.";
+                string script = "window.onload = function(){ alert('";
+                script += message;
+                script += "')};";
+                ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+            
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -84,6 +95,18 @@ namespace StockManagement
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
+
+            //Insert record here.
+
+            //Display success message.
+            string message = "Member Added Successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+
+
 
         }
 
@@ -136,6 +159,15 @@ namespace StockManagement
             commandd.ExecuteNonQuery();
             commandd.Dispose();
             mySqlConnection.Close();
+
+            //Insert record here.
+
+            //Display success message.
+            string message = "Stock Added Successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
 
 
