@@ -10,7 +10,7 @@
         
         </tr>
 
-        <%=getOutofStock()%>
+        <%=outOfStocks()%>
 
     </table>
 </asp:Content>

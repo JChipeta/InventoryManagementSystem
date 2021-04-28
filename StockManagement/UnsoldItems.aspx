@@ -13,7 +13,7 @@
              <td>LastPurchaseDate</td>
         </tr>
 
-        <%=unsoldItems()%>
+        <%=notSoldItems()%>
 
     </table>
 </asp:Content>

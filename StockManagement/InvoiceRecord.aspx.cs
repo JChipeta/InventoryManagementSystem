@@ -18,10 +18,10 @@ namespace StockManagement
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            prevPurchaseDetails();
+            lastPurchased();
         }
 
-        public string prevPurchaseDetails()
+        public string lastPurchased()
         {
             string dropdown = DropDownList1.SelectedValue.ToString();
 

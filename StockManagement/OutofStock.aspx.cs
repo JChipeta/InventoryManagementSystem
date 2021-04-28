@@ -16,7 +16,7 @@ namespace StockManagement
       
 
         }
-        public string getOutofStock()
+        public string outOfStocks()
         {
          
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;

@@ -16,7 +16,7 @@
             <td>Date</td>
         </tr>
 
-        <%=prevPurchaseDetails()%>
+        <%=lastPurchased()%>
 
     </table>
 </asp:Content>

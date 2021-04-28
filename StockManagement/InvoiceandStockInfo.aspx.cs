@@ -20,7 +20,7 @@ namespace StockManagement
         {
         }
 
-        public string getbill()
+        public string invoice()
         {
             string dropdown = DropDownList3.SelectedValue.ToString();
 
@@ -131,7 +131,7 @@ namespace StockManagement
             mySqlConnection.Close();
         }
 
-        public string getStockData()
+        public string getStock()
         {
             string dropdown = DropDownList3.SelectedValue.ToString();
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
@@ -181,8 +181,8 @@ namespace StockManagement
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            getStockData();
-            getbill();
+            getStock();
+            invoice();
            
         }
     }

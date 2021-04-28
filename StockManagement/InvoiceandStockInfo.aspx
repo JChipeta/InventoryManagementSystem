@@ -22,7 +22,7 @@
            <tr>
                <td>&nbsp;</td>
          </tr>
-           <%=getbill()%>
+           <%=invoice()%>
  </table>
     <br />
     <br />
@@ -35,7 +35,7 @@
             <td>Status</td>
         </tr>
 
-        <%=getStockData()%>
+        <%=getStock()%>
 
     </table>
     <br />

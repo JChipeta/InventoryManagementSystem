@@ -16,7 +16,7 @@ namespace StockManagement
         {
           
         }
-        public string runningOutofStock()
+        public string outOfStock()
         {
 
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
@@ -55,7 +55,7 @@ namespace StockManagement
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            runningOutofStock();
+            outOfStock();
         }
     }
 }
