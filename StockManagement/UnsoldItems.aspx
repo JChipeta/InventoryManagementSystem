@@ -3,7 +3,8 @@
         <b>
         <br />
         </b> 
-         &nbsp;<table class="table" width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
+     <h1  class="page-header">View Unsold Items</h1>
+         <table class="table" width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
         <tr align="left" style="background-color:#004080;color:White;" >
             <td> ItemCode </td>                        
             <td> ItemName </td>            

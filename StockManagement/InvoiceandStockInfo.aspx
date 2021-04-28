@@ -2,14 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <br />
     <br />
+     <h1  class="page-header">View Price</h1>
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Member]"></asp:SqlDataSource>
     <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="ItemName" DataValueField="ItemCode">
     </asp:DropDownList>
-    &nbsp; Quantity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Quantity
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Check Status" />
      <br />
     <br />
+   
      <table class="table" width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
         <tr align="left" style="background-color:#004080;color:White;" >
             <td> ItemName </td>  
@@ -27,6 +29,7 @@
     <br />
     <br />
     <br />
+    <h1  class="page-header">View Stock</h1>
     <table class="table" ="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
         <tr align="left" style="background-color:#004080;color:White;" >
             <td> ItemCode </td>                        
@@ -43,6 +46,6 @@
      <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource3" DataTextField="MemberName" DataValueField="MemberNumber">
 </asp:DropDownList>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
-<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Confirm Sale " />
+<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Sell Item " />
      
 </asp:Content>
