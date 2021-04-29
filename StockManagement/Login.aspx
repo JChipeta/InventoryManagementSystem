@@ -29,7 +29,7 @@
         </tr>
     </table>
            </div>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagement_databaseConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
 
     <asp:Button ID="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Login" />
 </asp:Content>

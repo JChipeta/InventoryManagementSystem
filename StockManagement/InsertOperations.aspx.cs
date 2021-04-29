@@ -20,7 +20,7 @@ namespace StockManagement
         {
     
             
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
 
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
 
@@ -88,7 +88,7 @@ namespace StockManagement
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
 
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
 
@@ -130,7 +130,7 @@ namespace StockManagement
             {
                 quantity = int.Parse(quantitytb0.Text);
             }
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
             SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Stock where ProductCode = '{itemcode}' ", mySqlConnection);

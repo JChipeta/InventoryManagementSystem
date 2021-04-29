@@ -22,7 +22,7 @@ namespace StockManagement
         {
 
             int dropdown = int.Parse(DropDownList1.SelectedValue.ToString());
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
             SqlCommand cmd = new SqlCommand($"Update dbo.UserLogin set Password='{repasswordtb.Text}' where userid={dropdown}", mySqlConnection);

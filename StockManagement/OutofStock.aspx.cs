@@ -19,7 +19,7 @@ namespace StockManagement
         public string outOfStocks()
         {
          
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
 
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand("Select * from dbo.Stock Join dbo.Product on dbo.Product.ProductCode=dbo.Stock.ProductCode where Quantity=0", mySqlConnection);

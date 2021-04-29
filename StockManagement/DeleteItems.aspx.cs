@@ -19,7 +19,7 @@ namespace StockManagement
         public string itemsfordelete()
         {
 
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             string invoiceddate = DateTime.Now.AddDays(-100).ToString("d");
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand($"Select * from dbo.Product Join dbo.Invoice on dbo.Invoice.ProductCode=dbo.Product.ProductCode where dbo.Product.ProductCode IN (Select cp.ProductCode from dbo.Invoice cp where cp.InvoiceDate<'{invoiceddate}' and not cp.ProductCode IN (Select c.ProductCode from dbo.Invoice c where c.InvoiceDate>'{invoiceddate}'))", mySqlConnection);

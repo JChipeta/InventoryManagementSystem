@@ -19,7 +19,7 @@ namespace StockManagement
         public string inactiveCustomers() 
         {
 
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             string dateForButton = DateTime.Now.AddDays(-31).ToString("d");
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand($"Select * from dbo.Customer where dbo.Customer.CustomerNumber IN (Select cp.CustomerNumber from dbo.Invoice cp where cp.InvoiceDate<'2021-03-3' and not cp.CustomerNumber IN (Select c.CustomerNumber from dbo.Invoice c where c.InvoiceDate>'2021-03-3'))", mySqlConnection);

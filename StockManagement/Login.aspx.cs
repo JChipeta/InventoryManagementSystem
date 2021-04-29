@@ -51,7 +51,7 @@ namespace StockManagement
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
 
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand($"Select * from dbo.UserLogin where dbo.UserLogin.email='{usernametb.Text}' and dbo.UserLogin.password='{passwordtb.Text}'", mySqlConnection);

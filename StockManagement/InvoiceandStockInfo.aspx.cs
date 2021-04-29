@@ -32,7 +32,7 @@ namespace StockManagement
                 quantity = int.Parse(TextBox1.Text);
             }
 
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand("Select * from dbo.Product where ProductCode='" + dropdown + "'", mySqlConnection);
             mySqlConnection.Open();
@@ -75,7 +75,7 @@ namespace StockManagement
                 quantity = int.Parse(TextBox1.Text);
             }
      
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
             SqlCommand cmd = new SqlCommand($"Insert into dbo.Invoice values('{itemname}','{member}','{DateTime.Now.ToString("d")}','{quantity}')", mySqlConnection);
@@ -134,7 +134,7 @@ namespace StockManagement
         public string getStock()
         {
             string dropdown = DropDownList3.SelectedValue.ToString();
-            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            string connectionstring = ConfigurationManager.ConnectionStrings["StockManagement_databaseConnectionString"].ConnectionString;
             int Quantity = 0;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             SqlCommand cmd = new SqlCommand("Select * from dbo.Stock where ProductCode = '" + dropdown + "'", mySqlConnection);
