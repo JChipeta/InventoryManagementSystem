@@ -34,7 +34,7 @@ namespace StockManagement
 
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand("Select * from dbo.Item where ItemCode='" + dropdown + "'", mySqlConnection);
+            SqlCommand cmd = new SqlCommand("Select * from dbo.Product where ProductCode='" + dropdown + "'", mySqlConnection);
             mySqlConnection.Open();
             cmd.Connection = mySqlConnection;
             string data = "";
@@ -78,7 +78,7 @@ namespace StockManagement
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
-            SqlCommand cmd = new SqlCommand($"Insert into dbo.CustomerPurchase values('{itemname}','{member}','{DateTime.Now.ToString("d")}','{quantity}')", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Insert into dbo.Invoice values('{itemname}','{member}','{DateTime.Now.ToString("d")}','{quantity}')", mySqlConnection);
 
             cmd.ExecuteNonQuery();
 
@@ -89,7 +89,7 @@ namespace StockManagement
 
 
 
-            SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Stock where ItemCode = '{itemname}' ", mySqlConnection);
+            SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Stock where ProductCode = '{itemname}' ", mySqlConnection);
 
          
             selectcommand.Connection = mySqlConnection;
@@ -125,7 +125,7 @@ namespace StockManagement
             selectcommand.ExecuteNonQuery();
 
             selectcommand.Dispose();
-            SqlCommand commandd = new SqlCommand($"Update dbo.Stock set Quantity={Quantity} where ItemCode='{itemname}' ", mySqlConnection);
+            SqlCommand commandd = new SqlCommand($"Update dbo.Stock set Quantity={Quantity} where ProductCode='{itemname}' ", mySqlConnection);
             commandd.ExecuteNonQuery();
             commandd.Dispose();
             mySqlConnection.Close();
@@ -137,10 +137,10 @@ namespace StockManagement
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             int Quantity = 0;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand("Select * from dbo.Stock where ItemCode='" + dropdown + "'", mySqlConnection);
+            SqlCommand cmd = new SqlCommand("Select * from dbo.Stock where ProductCode = '" + dropdown + "'", mySqlConnection);
             mySqlConnection.Open();
             cmd.Connection = mySqlConnection;
-
+                        
             string data = "";
 
             using (SqlDataReader QueryReader = cmd.ExecuteReader())

@@ -22,7 +22,7 @@ namespace StockManagement
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             string invoiceddate = DateTime.Now.AddDays(-31).ToString("d");
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand($"Select * from dbo.Item Join dbo.CustomerPurchase on dbo.CustomerPurchase.ItemCode=dbo.Item.ItemCode where dbo.Item.ItemCode IN (Select cp.ItemCode from dbo.CustomerPurchase cp where cp.BillingDate<'{invoiceddate}' and not cp.ItemCode IN (Select c.ItemCode from dbo.CustomerPurchase c where c.BillingDate>'{invoiceddate}'))", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Select * from dbo.Product Join dbo.Invoice on dbo.Invoice.ProductCode=dbo.Product.ProductCode where dbo.Product.ProductCode IN (Select cp.ProductCode from dbo.Invoice cp where cp.InvoiceDate<'{invoiceddate}' and not cp.ProductCode IN (Select c.ProductCode from dbo.Invoice c where c.InvoiceDate>'{invoiceddate}'))", mySqlConnection);
             mySqlConnection.Open();
             cmd.Connection = mySqlConnection;
 

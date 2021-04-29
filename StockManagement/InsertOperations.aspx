@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertOperations.aspx.cs" Inherits="StockManagement.InsertOperations" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1  class="page-header">Add Item</h1>
+    <h1  class="page-header">Add Product</h1>
 
  <table style="width:500px;" class="table" >
 

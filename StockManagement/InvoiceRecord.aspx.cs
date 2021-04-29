@@ -24,20 +24,14 @@ namespace StockManagement
         public string lastPurchased()
         {
             string dropdown = DropDownList1.SelectedValue.ToString();
-
-
-
             int quantity = 0;
             string dateForButton = DateTime.Now.AddDays(-31).ToString("d");
-
-
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand($"Select * from dbo.CustomerPurchase c Join dbo.Item i on c.ItemCode = i.ItemCode where MemberNumber='{dropdown}' and BillingDate>='{dateForButton}'", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Select * from dbo.Invoice c Join dbo.Product i on c.ProductCode = i.ProductCode where CustomerNumber='{dropdown}' and InvoiceDate>='{dateForButton}'", mySqlConnection);
             mySqlConnection.Open();
             cmd.Connection = mySqlConnection;
             string data = "";
-
             using (SqlDataReader QueryReader = cmd.ExecuteReader())
             {
                 if (QueryReader.HasRows)
