@@ -3,7 +3,7 @@
 
       <h1  class="page-header">                     Login Page</h1>
     <div style="display: flex;">
-    <table style="margin-left: auto;  margin-right: auto;width:500px;" class="table" >
+    <table width:500px;" class="table" >
         <tr>
             <td>
                 Username</td>
@@ -31,5 +31,5 @@
            </div>
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
 
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
+    <asp:Button ID="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Login" />
 </asp:Content>

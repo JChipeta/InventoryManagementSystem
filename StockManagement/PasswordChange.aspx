@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1  class="page-header">Change Password</h1>
     <div style="display: flex;">
-        <table style="margin-left: auto;  margin-right: auto;width:500px;" class="table" >
+        <table  class="table" >
             <tr>
                 <td>Password</td>
                 <td>
@@ -17,7 +17,7 @@
             </tr>
             <tr>
                 <td>
-               <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Change Password" />
+               <asp:Button ID="Button2" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Change Password" />
                     </td>
             </tr>
         </table>

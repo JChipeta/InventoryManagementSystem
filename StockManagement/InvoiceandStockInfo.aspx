@@ -8,7 +8,7 @@
     </asp:DropDownList>
     Quantity
     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Check Status" />
+    <asp:Button ID="Button3" class="btn btn-primary" runat="server" OnClick="Button3_Click" Text="Check Status" />
      <br />
     <br />
    
@@ -46,6 +46,6 @@
      <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource3" DataTextField="MemberName" DataValueField="MemberNumber">
 </asp:DropDownList>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
-<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Sell Item " />
+<asp:Button ID="Button2" class="btn btn-primary" runat="server" OnClick="Button2_Click" Text="Sell Item " />
      
 </asp:Content>

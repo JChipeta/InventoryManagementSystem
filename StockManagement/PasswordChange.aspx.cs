@@ -14,10 +14,14 @@ namespace StockManagement
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
@@ -26,6 +30,20 @@ namespace StockManagement
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             mySqlConnection.Close();
+
+
+            //Display success message.
+            string message = "Password Changed Successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            //empty text after message
+            passwordtb.Text = "";
+            repasswordtb.Text = "";
+
+
 
 
 
