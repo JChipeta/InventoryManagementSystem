@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="StockManagement.SiteMaster" %>
 
 <!DOCTYPE html>
-
+<a href="Site.Master">Site.Master</a>
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
