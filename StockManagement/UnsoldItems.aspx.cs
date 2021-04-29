@@ -41,11 +41,6 @@ namespace StockManagement
                         int price = QueryReader.GetInt32(3);
                         string category = QueryReader.GetString(4);
                         string billingdate = QueryReader.GetDateTime(7).ToString("d");
-
-
-
-
-
                         data += "<tr><td> " + itemcode + "</td><td> " + itemname + "</td><td> " + description + "</td><td> " + price + "</td><td> " + category + "</td><td> " + billingdate + "</td><tr> ";
                     }
                     mySqlConnection.Close();
