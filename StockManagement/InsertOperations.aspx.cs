@@ -25,19 +25,20 @@ namespace StockManagement
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
 
             mySqlConnection.Open();
-            SqlCommand cmd = new SqlCommand($"Insert into dbo.Item values('{itemnametb.Text}','{descriptiontb.Text}','{pricetb.Text}','{categorytb.Text}')", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Insert into dbo.Product values('{itemnametb.Text}','{descriptiontb.Text}','{pricetb.Text}','{categorytb.Text}')", mySqlConnection);
             cmd.ExecuteNonQuery();
             cmd.Dispose();
 
             int itemNumber = 0;
 
 
-            SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Item where ItemName='{itemnametb.Text}'", mySqlConnection);
+            SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Product where ProductName='{itemnametb.Text}'", mySqlConnection);
 
             using (SqlDataReader QueryReader = selectcommand.ExecuteReader())
             {
                 if (QueryReader.HasRows)
                 {
+                  
 
                     while (QueryReader.Read())
                     {
@@ -69,7 +70,7 @@ namespace StockManagement
            
 
                 //Display success message.
-                string message = "Item Added Successfully.";
+                string message = "Product Added Successfully.";
                 string script = "window.onload = function(){ alert('";
                 script += message;
                 script += "')};";
@@ -92,7 +93,7 @@ namespace StockManagement
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
 
             mySqlConnection.Open();
-            SqlCommand cmd = new SqlCommand($"Insert into dbo.Member values('{membernametb.Text}','{addresstb.Text}','{contactnumbertb.Text}','{emailtb.Text}','{membertypetb.Text}')", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Insert into dbo.Customer values('{membernametb.Text}','{addresstb.Text}','{contactnumbertb.Text}','{emailtb.Text}','{membertypetb.Text}')", mySqlConnection);
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
@@ -100,7 +101,7 @@ namespace StockManagement
             //Insert record here.
 
             //Display success message.
-            string message = "Member Added Successfully.";
+            string message = "Customer Added Successfully.";
             string script = "window.onload = function(){ alert('";
             script += message;
             script += "')};";
@@ -132,7 +133,7 @@ namespace StockManagement
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
-            SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Stock where ItemCode = '{itemcode}' ", mySqlConnection);
+            SqlCommand selectcommand = new SqlCommand($"Select * from dbo.Stock where ProductCode = '{itemcode}' ", mySqlConnection);
 
             selectcommand.Connection = mySqlConnection;
             string data = "";
@@ -160,7 +161,7 @@ namespace StockManagement
 
             }
 
-            SqlCommand commandd = new SqlCommand($"Update dbo.Stock set Quantity={Quantity}, StockPurchaseDate='{DateTime.Now.ToString("d")}' where ItemCode='{itemcode}'", mySqlConnection);
+            SqlCommand commandd = new SqlCommand($"Update dbo.Stock set Quantity={Quantity}, StockPurchaseDate='{DateTime.Now.ToString("d")}' where ProductCode='{itemcode}'", mySqlConnection);
             commandd.ExecuteNonQuery();
             commandd.Dispose();
             mySqlConnection.Close();
