@@ -6,7 +6,7 @@
     <table width:500px;" class="table" >
         <tr>
             <td>
-                Username</td>
+                Email</td>
             <td>
                 <asp:TextBox ID="usernametb"  runat="server" Height="2em" Width="30em"></asp:TextBox>
             </td>

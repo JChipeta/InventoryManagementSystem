@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="StockManagement.SiteMaster" %>
 
 <!DOCTYPE html>
-<a href="Site.Master">Site.Master</a>
+<a href="Site.Master"></a>
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
@@ -58,9 +58,9 @@
                         <li><a runat="server" href="~/InvoiceandStockInfo">Invoice and Stock</a></li>
                         <li><a runat="server" href="~/InactiveCustomers">InActive Customers</a></li>
                           <li><a runat="server" href="~/InvoiceRecord">Invoice Record</a></li>
-                        <li><a runat="server" href="~/DeleteItems">Delete Items</a></li>
-                        <li><a runat="server" href="~/UnsoldItems">Unsold Items</a></li>
-                       <li><a runat="server" href="~/OutofStock">OutofStock Items</a></li>
+                        <li><a runat="server" href="~/DeleteItems">Delete Products</a></li>
+                        <li><a runat="server" href="~/UnsoldItems">Unsold Products</a></li>
+                       <li><a runat="server" href="~/OutofStock">OutofStock Products</a></li>
                                                <li><a runat="server" href="~/Login">Logout</a></li>
                                                <li><a runat="server" href="~/PasswordChange">ChangePassword</a></li>
 

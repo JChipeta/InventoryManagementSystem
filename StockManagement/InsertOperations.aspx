@@ -8,7 +8,7 @@
         <td>
 
      
-    Item Name <asp:TextBox ID="itemnametb"  runat="server" CssClass="glyphicon-envelope"></asp:TextBox>
+    Product Name <asp:TextBox ID="itemnametb"  runat="server" CssClass="glyphicon-envelope"></asp:TextBox>
 
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup='valGroup1' ControlToValidate="itemnametb" runat="server" ErrorMessage="Insert Name!" ForeColor="#FF3300"></asp:RequiredFieldValidator>
 
@@ -47,17 +47,17 @@ Category <asp:TextBox ID="categorytb" runat="server"></asp:TextBox>
 
      <td>
          <br />
-<asp:Button ID="Button1" class="btn btn-primary" runat="server" ValidationGroup='valGroup1' OnClick="Button1_Click" Text="Add Item" Width="83px" />
+<asp:Button ID="Button1" class="btn btn-primary" runat="server" ValidationGroup='valGroup1' OnClick="Button1_Click" Text="Add Product" Width="154px" />
     </td>
      </table>
 
-    <h1  class="page-header">Add Member</h1>
+    <h1  class="page-header">Add Customer</h1>
      <table style="width:500px;" class="table" >
 
          <td>
 
              
-   Member Name <asp:TextBox ID="membernametb" runat="server"></asp:TextBox>
+   Customer Name <asp:TextBox ID="membernametb" runat="server"></asp:TextBox>
 
              <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ValidationGroup='valGroup2' ControlToValidate="membernametb" runat="server" ErrorMessage="Insert Name!" ForeColor="#FF3300"></asp:RequiredFieldValidator>
 
@@ -78,7 +78,7 @@ Email <asp:TextBox ID="emailtb" runat="server"></asp:TextBox>
     </td>
 
 <td>
-Member Type
+Customer Type
 
 <asp:TextBox ID="membertypetb" runat="server"></asp:TextBox>
 
@@ -89,7 +89,7 @@ Member Type
          <td>
              <br />
 
-<asp:Button ID="Button2" class="btn btn-primary" runat="server" ValidationGroup='valGroup2' OnClick="Button2_Click" Text="Add Member" />
+<asp:Button ID="Button2" class="btn btn-primary" runat="server" ValidationGroup='valGroup2' OnClick="Button2_Click" Text="Add Customer" />
              </td>
 
          </table>
@@ -99,7 +99,7 @@ Member Type
 
         <td>
     
-<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="ItemName" DataValueField="ItemCode">
+<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="ProductName" DataValueField="ProductCode">
 </asp:DropDownList>
             </td>
 
@@ -111,7 +111,7 @@ Quantity
             </td>
 
         <td>
-<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagement_databaseConnectionString %>" SelectCommand="SELECT * FROM [Product]" OnSelecting="SqlDataSource2_Selecting"></asp:SqlDataSource>
 <asp:Button ID="Button3" class="btn btn-primary" runat="server" ValidationGroup='valGroup3' OnClick="Button3_Click" Text="Add Stock" />
             </td>
         </table>
