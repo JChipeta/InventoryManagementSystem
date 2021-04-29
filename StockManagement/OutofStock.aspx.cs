@@ -22,7 +22,7 @@ namespace StockManagement
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
 
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand("Select * from dbo.Stock where Quantity=0", mySqlConnection);
+            SqlCommand cmd = new SqlCommand("Select * from dbo.Stock Join dbo.Product on dbo.Product.ProductCode=dbo.Stock.ProductCode where Quantity=0", mySqlConnection);
             mySqlConnection.Open();
             cmd.Connection = mySqlConnection;
 
@@ -35,14 +35,15 @@ namespace StockManagement
 
                     while (QueryReader.Read())
                     {
-                        int itemCode = QueryReader.GetInt32(1);
+                        string productname = QueryReader.GetString(5);
+                    
                         int Quantity = QueryReader.GetInt32(2);
                         string StockPurchaseDate = QueryReader.GetString(3);
                  
                      
 
 
-                        data += "<tr><td> " + itemCode + "</td><td> " + Quantity + "</td><td> " + StockPurchaseDate +"</td><tr> ";
+                        data += "<tr><td> "+  productname + "</td><td> " + Quantity + "</td><td> " + StockPurchaseDate +"</td><tr> ";
                     }
                     mySqlConnection.Close();
 

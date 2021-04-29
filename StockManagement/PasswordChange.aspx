@@ -4,13 +4,14 @@
     <div style="display: flex;">
         <table  class="table" >
             <tr>
-                <td>Password</td>
+                <td>Select User</td>
                 <td>
-                    <asp:TextBox ID="passwordtb"  runat="server" Height="2em" Width="30em"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="email" DataValueField="userid">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
-                <td>Re-Enter</td>
+                <td>New Password</td>
                 <td>
                     <asp:TextBox ID="repasswordtb"  runat="server" Height="2em" Width="30em"></asp:TextBox>
                 </td>
@@ -22,5 +23,5 @@
             </tr>
         </table>
     </div>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagement_databaseConnectionString %>" SelectCommand="SELECT * FROM [UserLogin]"></asp:SqlDataSource>
 </asp:Content>

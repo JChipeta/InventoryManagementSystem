@@ -3,8 +3,8 @@
      <h1  class="page-header">Delete Products</h1>
          <table class="table" width="100%" align="center" cellpadding="2" cellspacing="2" border="0" bgcolor="#EAEAEA" >
         <tr align="left" style="background-color:#004080;color:White;" >
-            <td> ItemCode </td>                        
-            <td> ItemName </td>            
+            <td> Product Code </td>                        
+            <td> Product Name </td>            
             <td>Description</td> 
             <td>Price</td>
              <td>Category</td>

@@ -21,16 +21,15 @@ namespace StockManagement
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-
+            int dropdown = int.Parse(DropDownList1.SelectedValue.ToString());
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
             mySqlConnection.Open();
-            SqlCommand cmd = new SqlCommand($"Update dbo.UserLogin set Password='{passwordtb.Text}' where email='asis@gmail.com'", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Update dbo.UserLogin set Password='{repasswordtb.Text}' where userid={dropdown}", mySqlConnection);
             cmd.Connection = mySqlConnection;
             cmd.ExecuteNonQuery();
             cmd.Dispose();
             mySqlConnection.Close();
-
 
             //Display success message.
             string message = "Password Changed Successfully.";
@@ -40,7 +39,7 @@ namespace StockManagement
             ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
 
             //empty text after message
-            passwordtb.Text = "";
+ 
             repasswordtb.Text = "";
 
 
