@@ -58,7 +58,7 @@
                         <li><a runat="server" href="~/InvoiceandStockInfo">Invoice and Stock</a></li>
                         <li><a runat="server" href="~/InactiveCustomers">InActive Customers</a></li>
                           <li><a runat="server" href="~/InvoiceRecord">Invoice Record</a></li>
-                        <li><a runat="server" href="~/DeleteItems">Delete Products</a></li>
+                        <li><a runat="server" href="~/DeleteStock">Delete Stock</a></li>
                         <li><a runat="server" href="~/UnsoldItems">Unsold Products</a></li>
                        <li><a runat="server" href="~/OutofStock">OutofStock Products</a></li>
                                                <li><a runat="server" href="~/Login">Logout</a></li>

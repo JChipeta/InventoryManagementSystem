@@ -132,7 +132,7 @@
     <Content Include="Login.aspx" />
     <Content Include="OutofStock.aspx" />
     <Content Include="InvoiceRecord.aspx" />
-    <Content Include="DeleteItems.aspx" />
+    <Content Include="DeleteStock.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -238,12 +238,12 @@
     <Compile Include="InvoiceRecord.aspx.designer.cs">
       <DependentUpon>InvoiceRecord.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DeleteItems.aspx.cs">
-      <DependentUpon>DeleteItems.aspx</DependentUpon>
+    <Compile Include="DeleteStock.aspx.cs">
+      <DependentUpon>DeleteStock.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DeleteItems.aspx.designer.cs">
-      <DependentUpon>DeleteItems.aspx</DependentUpon>
+    <Compile Include="DeleteStock.aspx.designer.cs">
+      <DependentUpon>DeleteStock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
