@@ -128,6 +128,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="PasswordChange.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="InactiveCustomers.aspx" />
     <Content Include="Login.aspx" />
@@ -273,6 +274,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChange.aspx.cs">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.aspx.designer.cs">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

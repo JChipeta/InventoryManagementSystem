@@ -11,17 +11,8 @@ namespace StockManagement
 {
 
 
-    public partial class Login
+    public partial class Change_Password
     {
-
-        /// <summary>
-        /// usernametb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usernametb;
 
         /// <summary>
         /// passwordtb control.
@@ -33,6 +24,24 @@ namespace StockManagement
         protected global::System.Web.UI.WebControls.TextBox passwordtb;
 
         /// <summary>
+        /// repasswordtb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox repasswordtb;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
         /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -40,14 +49,5 @@ namespace StockManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
