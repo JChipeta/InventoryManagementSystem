@@ -47,7 +47,7 @@ Category <asp:TextBox ID="categorytb" runat="server"></asp:TextBox>
 
      <td>
          <br />
-<asp:Button ID="Button1" runat="server" ValidationGroup='valGroup1' OnClick="Button1_Click" Text="Add Item" Width="83px" />
+<asp:Button ID="Button1" class="btn btn-primary" runat="server" ValidationGroup='valGroup1' OnClick="Button1_Click" Text="Add Item" Width="83px" />
     </td>
      </table>
 
@@ -89,7 +89,7 @@ Member Type
          <td>
              <br />
 
-<asp:Button ID="Button2" runat="server" ValidationGroup='valGroup2' OnClick="Button2_Click" Text="Add Member" />
+<asp:Button ID="Button2" class="btn btn-primary" runat="server" ValidationGroup='valGroup2' OnClick="Button2_Click" Text="Add Member" />
              </td>
 
          </table>
@@ -112,7 +112,7 @@ Quantity
 
         <td>
 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StockManagementConnectionString %>" SelectCommand="SELECT * FROM [Item]"></asp:SqlDataSource>
-<asp:Button ID="Button3" runat="server" ValidationGroup='valGroup3' OnClick="Button3_Click" Text="Add Stock" />
+<asp:Button ID="Button3" class="btn btn-primary" runat="server" ValidationGroup='valGroup3' OnClick="Button3_Click" Text="Add Stock" />
             </td>
         </table>
 </asp:Content>

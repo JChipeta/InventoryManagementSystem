@@ -17,5 +17,5 @@
              
 
     </table>
-    <asp:Button ID="Button1" runat="server" Text="Delete" />
+    <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Delete" />
 </asp:Content>
