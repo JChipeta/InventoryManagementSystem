@@ -52,12 +52,7 @@ namespace StockManagement
 
                 }
 
-                /*         cmd.Parameters.AddWithValue("@ItemCode", $"{itemname}");
-                         cmd.Parameters.AddWithValue("@MemberNumber", $"{member}");
-                         cmd.Parameters.AddWithValue("@BillingDate", "2021-05-04");
-                         cmd.Parameters.AddWithValue("@Quantity", $"{quantity}");*/
-
-
+              
             }
          
 
@@ -70,6 +65,23 @@ namespace StockManagement
             insertcommand.Dispose();
 
 
+
+           
+
+                //Display success message.
+                string message = "Item Added Successfully.";
+                string script = "window.onload = function(){ alert('";
+                script += message;
+                script += "')};";
+                ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            //empty text after message
+                itemnametb.Text = "";
+                descriptiontb.Text = "";
+                pricetb.Text = "";
+                categorytb.Text = "";
+                quantitytb.Text = "";
+;
 
         }
 
@@ -84,6 +96,25 @@ namespace StockManagement
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();
+
+            //Insert record here.
+
+            //Display success message.
+            string message = "Member Added Successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+            //empty text field after message
+            membernametb.Text = "";
+            addresstb.Text = "";
+            contactnumbertb.Text = "";
+            emailtb.Text = "";
+            membertypetb.Text = "";
+
+
+
 
         }
 
@@ -124,10 +155,7 @@ namespace StockManagement
 
                 }
 
-                /*         cmd.Parameters.AddWithValue("@ItemCode", $"{itemname}");
-                         cmd.Parameters.AddWithValue("@MemberNumber", $"{member}");
-                         cmd.Parameters.AddWithValue("@BillingDate", "2021-05-04");
-                         cmd.Parameters.AddWithValue("@Quantity", $"{quantity}");*/
+             
 
 
             }
@@ -137,6 +165,15 @@ namespace StockManagement
             commandd.Dispose();
             mySqlConnection.Close();
 
+            //Insert record here.
+
+            //Display success message.
+            string message = "Stock Added Successfully.";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+            quantitytb0.Text = "";
 
 
         }

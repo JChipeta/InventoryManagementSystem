@@ -22,7 +22,7 @@ namespace StockManagement
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
             string dateForButton = DateTime.Now.AddDays(-31).ToString("d");
             SqlConnection mySqlConnection = new SqlConnection(connectionstring);
-            SqlCommand cmd = new SqlCommand($"Select * from dbo.Member m Join dbo.CustomerPurchase c on m.MemberNumber=c.MemberNumber where c.BillingDate!>'{dateForButton}'", mySqlConnection);
+            SqlCommand cmd = new SqlCommand($"Select * from dbo.Member where dbo.Member.MemberNumber IN (Select cp.MemberNumber from dbo.CustomerPurchase cp where cp.BillingDate<'2021-03-3' and not cp.MemberNumber IN (Select c.MemberNumber from dbo.CustomerPurchase c where c.BillingDate>'2021-03-3'))", mySqlConnection);
             mySqlConnection.Open();
             cmd.Connection = mySqlConnection;
 

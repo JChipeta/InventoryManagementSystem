@@ -14,9 +14,9 @@ namespace StockManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+
         }
-        public string outOfStock()
+        public string runningOutofStock()
         {
 
             string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
@@ -32,30 +32,50 @@ namespace StockManagement
             {
                 if (QueryReader.HasRows)
                 {
+                    Response.Redirect("AddItem.aspx");
 
-                    while (QueryReader.Read())
-                    {
-                        string itemCode = QueryReader.GetString(1);
-                        int Quantity = QueryReader.GetInt32(2);
-                        string StockPurchaseDate = QueryReader.GetString(3);
-
-                        stock = stock + "\n" + itemCode;
-
-
-               
-                    }
-                    MessageBox.Show(stock);
 
                     mySqlConnection.Close();
 
                 }
-                return data;
+                else
+                {
+                    MessageBox.Show("Login Failure Please Try Again");
+
+
+                }
+
             }
+            return data;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            outOfStock();
+            string connectionstring = ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+
+            SqlConnection mySqlConnection = new SqlConnection(connectionstring);
+            SqlCommand cmd = new SqlCommand($"Select * from dbo.UserLogin where dbo.UserLogin.email='{usernametb.Text}' and dbo.UserLogin.password='{passwordtb.Text}'", mySqlConnection);
+            mySqlConnection.Open();
+            cmd.Connection = mySqlConnection;
+
+            string data = "";
+            string stock = "";
+            using (SqlDataReader QueryReader = cmd.ExecuteReader())
+            {
+                if (QueryReader.HasRows)
+                {
+
+                    Response.Redirect("InsertOperations.aspx");
+                    MessageBox.Show(stock);
+                    runningOutofStock();
+                    mySqlConnection.Close();
+
+                }
+            }
+
+
+
         }
+
     }
 }
