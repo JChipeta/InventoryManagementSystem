@@ -17,5 +17,5 @@
              
 
     </table>
-    <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Delete" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Clear Stock" OnClick="Button1_Click" />
 </asp:Content>

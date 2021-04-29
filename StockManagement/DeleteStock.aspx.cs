@@ -87,7 +87,7 @@ namespace StockManagement
                 }
 
             }
-
+            
 
 
 
@@ -100,6 +100,13 @@ namespace StockManagement
                 commandd.Dispose();
             }
             mySqlConnection.Close();
+            string message = "Stock Cleared Successfully! Check Out of Stock Products";
+            string script = "window.onload = function(){ alert('";
+            script += message;
+            script += "')};";
+            ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+
+
 
 
         }
