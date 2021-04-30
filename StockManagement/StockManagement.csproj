@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="bgimage.jpg" />
     <Content Include="InsertOperations.aspx" />
     <Content Include="InvoiceandStockInfo.aspx" />
     <Content Include="Contact.aspx" />
@@ -162,6 +163,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="stylesheets.css" />
     <Content Include="UnsoldItems.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
